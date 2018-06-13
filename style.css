@@ -69,7 +69,7 @@
     border-radius: 4px;
     cursor: pointer;
     color: white;
-    font-size:48px;
+    font-size:30px;
 }
 .button:hover{
     transform: scale(1.2);
