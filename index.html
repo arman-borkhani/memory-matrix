@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Memory Matrix</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="fontawesome-all.min.js"></script>
+    
+</head>
+<body>
+   <div class="wrapper">
+    <div class="matrix middle">
+      <div id="start" class="popup start"><p onclick="matrix()">START</p></div>
+        <div id="0" class="tile"  onclick="choose(0)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="1" class="tile"  onclick="choose(1)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="2" class="tile"  onclick="choose(2)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="3" class="tile"  onclick="choose(3)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="4" class="tile"  onclick="choose(4)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="5" class="tile"  onclick="choose(5)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="6" class="tile"  onclick="choose(6)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="7" class="tile"  onclick="choose(7)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="8" class="tile"  onclick="choose(8)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="9" class="tile"  onclick="choose(9)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="10" class="tile"  onclick="choose(10)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="11" class="tile"  onclick="choose(11)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="12" class="tile"  onclick="choose(12)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="13" class="tile"  onclick="choose(13)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="14" class="tile"  onclick="choose(14)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="15" class="tile"  onclick="choose(15)">
+            <div class="flipper">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div id="end" class="popup end">
+            <div class="end-content">
+                <p id="lose" class="end-msg">Game Over</p>
+                <p id="win" class="end-msg">You win!</p>
+                <i class="fas fa-redo button" onclick="continu()"></i>
+            </div>
+       </div>
+    </div>
+    <div class="matrix-info middle">
+        <div id="score" class="score">score : 0</div>
+        <div id="tiles" class="tiles"></div>
+    </div>
+    </div>
+    
+    <audio id="card-effect" src="sounds/button_click_type.ogg"></audio>
+    <script src="js.js"></script>
+    <script> 
+        starter();
+    </script>
+    <footer >created by <a href="https://twitter.com/arman_d_b">arman borkhani</a></footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.wrapper{
+    width: 100%;
+    min-height: 640px; 
+    padding-top: 100px;
+    text-align: center;
+}
+
+.middle{
+    display: block;
+    margin: 0 auto;
+}
+.matrix{
+    width:400px;
+    height:400px;
+    overflow:auto;
+    background: #656D78;
+    padding: 8px;
+    position: relative;
+}
+.start p{
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    margin-top:43%;
+    cursor: pointer;
+    font-size: 30px;
+}
+.end{
+    display: none;
+}
+.popup{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    right:0;
+    background: black;
+    opacity: 0.7;
+    text-align: center;
+    z-index: 2;
+    
+}
+.tile{
+    width:calc(25% - 10px);
+    height:calc(25% - 10px);
+    float: right;
+    cursor: pointer;
+    background:inherit;
+    margin: 5px;
+    perspective: 1000px;
+    
+}
+.end-content{
+   margin-top: 42%; 
+}
+.end-msg{
+    color:white;
+    display: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+.button{
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size:48px;
+}
+.button:hover{
+    transform: scale(1.2);
+}
+.matrix-info{
+    width:400px;
+    padding:10px 5px;
+    overflow: hidden;
+}
+.score{
+    float:left;
+}
+.tiles{
+    float:right;
+}
+.tile.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.front, .back {
+	width: 100%;
+	height: 100%;
+}
+.flipper {
+    width: 100%;
+    height: 100%;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+    background: #CCD1D9;
+}
+.back {
+	transform: rotateY(180deg);
+    background: #FC6E51;
+}
+.front:hover{
+    background: #E6E9ED;
+}
+footer{
+    width: 100%;
+    background: deepskyblue;
+    height: 60px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+footer a:active,a,a:hover{
+    color:white;
+}
+@media(max-width:400px){
+    .matrix{
+       width: 250px;
+       height: 250px;
+    }
+    .start p{
+        margin-top:40%;
+    }
+}
