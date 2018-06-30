@@ -10,7 +10,7 @@ var endEl = document.getElementById("end"); //  end element
 
 //the essential actions before running the main function
 function starter(){
-    createEl();
+     createEl();
         document.getElementById('tiles').innerHTML= `tiles : ${tiles}`;
     
         var allTiles = document.querySelectorAll(".tile");
