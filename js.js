@@ -15,6 +15,7 @@ function starter(){
     
         var allTiles = document.querySelectorAll(".tile");
         allTiles.forEach(item => item.addEventListener('click',function(){
+            choose(Number(item.id));
             this.classList.add('hover');
             document.getElementById('card-effect').play();
             
@@ -131,7 +132,25 @@ function continu(){
      }
 
 }
+// create html elements of matrix
+function createEl(){
+    for(var i= 0 ; i <= 15 ; i++){
+           var t = document.createElement("div");
+            t.id = i;
+            t.className = "tile";
+            var flipper = document.createElement('div');
+            flipper.className = "flipper";
+            var front = document.createElement('div');
+            front.className = "front";
+            var back = document.createElement("div");
+            back.className = "back";
+            flipper.appendChild(front);
+            flipper.appendChild(back);
+            t.appendChild(flipper);
+            document.querySelector('.matrix').appendChild(t); 
+        
+    }
 
-
+}
 
 
