@@ -2,56 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Memory Matrix</title>
-    
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <a class="github-link" href="https://github.com/arman-borkhani/memory-matrix" ><i class="fab fa-github"></i></a>
    <div class="wrapper">
-       <div id="options" class="options">
-           <div class="title">Choose the Board</div>
-       <label class="radio-container">
-           3x3
-            <input type="radio" name="tiles-number" value="9">
-            <span class="checkmark"></span>
-       </label>
-       <label class="radio-container">
-            4x4
-            <input type="radio" name="tiles-number" value="16">
-            <span class="checkmark"></span>
-        </label>
-        <label class="radio-container">
-            5x5
-            <input  type="radio" name="tiles-number" value="25">
-            <span class="checkmark"></span>
-        </label>
-        <button id="show-board" class="btn middle" onclick="options()" >Show Board</button>
-    </div> 
-    <div id="board" class="slide middle">  
-    <div class="matrix">
-      <div id="start" class="popup start"><p onclick="matrix()">START</p></div>
-      
-        <div id="end" class="popup end">
-            <div class="end-content">
-                <p id="lose" class="end-msg">Game Over</p>
-                <p id="win" class="end-msg">You win!</p>
-                <i class="fas fa-redo button" onclick="continu()"></i>
-            </div>
-       </div>
+    <div class="matrix middle">
+       <div id="start" class="popup start"><p onclick="matrix()">START</p></div>
+        <div id="0" class="box"  onclick="choose(0)"></div>
+        <div id="1" class="box"  onclick="choose(1)"></div>
+        <div id="2" class="box"  onclick="choose(2)"></div>
+        <div id="3" class="box"  onclick="choose(3)"></div>
+        <div id="4" class="box"  onclick="choose(4)"></div>
+        <div id="5" class="box"  onclick="choose(5)"></div>
+        <div id="6" class="box"  onclick="choose(6)"></div>
+        <div id="7" class="box"  onclick="choose(7)"></div>
+        <div id="8" class="box"  onclick="choose(8)"></div>
+        <div id="9" class="box"  onclick="choose(9)"></div>
+        <div id="10" class="box"  onclick="choose(10)"></div>
+        <div id="11" class="box"  onclick="choose(11)"></div>
+        <div id="12" class="box"  onclick="choose(12)"></div>
+        <div id="13" class="box"  onclick="choose(13)"></div>
+        <div id="14" class="box"  onclick="choose(14)"></div>
+        <div id="15" class="box"  onclick="choose(15)"></div>
+        <div id="end" class="popup end"><i class="fas fa-redo button" onclick="continu()"></i></div>
+       
     </div>
-    <div class="matrix-info">
-        <div id="score" class="score">score : 0</div>
-        <div id="tiles" class="tiles"></div>
+         <div class="matrix-info middle">
+        <div class="score">score: 0</div>
+        <div class="tile">tile: 6</div>
     </div>
-    <button class="btn h-float-left" onclick="removeEl()" >Back to options</button>
-</div> 
     </div>
-    
-    <audio id="card-effect" src="sounds/button_click_type.ogg"></audio>
     <script src="js.js"></script>
+    <script> 
+ 
+        
+    </script>
+    
 </body>
 </html>
