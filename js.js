@@ -1,5 +1,5 @@
 
-var tiles = 7; // the number of shown tiles
+var tiles ; // the number of shown tiles
 var tileId; 
 var falseCh; //the false choice counter
 var trueCh;  //the true choice counter
@@ -9,8 +9,29 @@ var winEl = document.getElementById("win"); //win message element
 var endEl = document.getElementById("end"); //  end element
 
 //the essential actions before running the main function
+function options(){
+    document.getElementById('start').style.display = '';
+    document.getElementById('end').style.display = 'none';
+    tilesNumber = document.querySelector('input[name=tiles-number]:checked').value;
+    console.log(typeof(tilesNumber));
+    createEl(tilesNumber-1);
+    var boardWidth = Math.sqrt(tilesNumber) * 90 + 16; //
+    document.getElementById('board').style.width = `${boardWidth}px`;
+    document.getElementById('board').classList.add('show');
+    document.getElementById('options').style.opacity = '0';
+    switch(tilesNumber){
+        case '9' : tiles = 4;
+        break;
+        case '16' : tiles = 7;
+        break;
+        case '25' : tiles = 10;
+        break;
+    }
+    starter();
+}
+
 function starter(){
-     createEl();
+     
         document.getElementById('tiles').innerHTML= `tiles : ${tiles}`;
     
         var allTiles = document.querySelectorAll(".tile");
@@ -43,7 +64,7 @@ function getRandomNumber(max){
 function getId(){
             var id=[];
             for(var i = 0 ; i < tiles ; i++){
-                var a = getRandomNumber(16);
+                var a = getRandomNumber(tilesNumber);
                 if(id.indexOf(a) > -1){
                     i--;
                 }else{
@@ -133,8 +154,8 @@ function continu(){
 
 }
 // create html elements of matrix
-function createEl(){
-    for(var i= 0 ; i <= 15 ; i++){
+function createEl(n){
+    for(var i= 0 ; i <= n ; i++){
            var t = document.createElement("div");
             t.id = i;
             t.className = "tile";
@@ -151,6 +172,15 @@ function createEl(){
         
     }
 
+}
+function removeEl(){
+    var t = document.querySelectorAll('.tile');
+    console.log(t);
+    for(var i= 0 ; i < t.length ; i++){
+        document.querySelector('.matrix').removeChild(t[i]);
+    }
+    document.getElementById('board').classList.remove('show');
+    document.getElementById('options').style.opacity = '1';
 }
 
 
