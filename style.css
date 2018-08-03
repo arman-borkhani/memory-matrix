@@ -28,9 +28,6 @@
     cursor: pointer;
     font-size: 30px;
 }
-.start p:hover{
-    
-}
 .end{
     display: none;
 }
