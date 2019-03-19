@@ -46,9 +46,10 @@
     color: white;
     padding: 10px;
     font-weight: bold;
-    margin-top:43%;
+    margin: 43% auto 0;
     cursor: pointer;
     font-size: 30px;
+    display: table;
 }
 .end{
     display: none;
